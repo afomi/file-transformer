@@ -1,0 +1,38 @@
+<header class="px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+    <div class="flex items-center gap-4">
+      <a href="/"
+        class="hover:text-lime-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+      </a>
+      <p class="rounded-full font-semibold leading-6">
+        File Transformer
+      </p>
+    </div>
+    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+      <a
+        href="https://civic.studio"
+        class="hover:text-zinc-700"
+        target="_blank">
+        Support
+      </a>
+      <a
+        href="https://github.com/afomi/"
+        class="hover:text-zinc-700"
+        target="_blank">
+        GitHub
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl">
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+  </div>
+</main>

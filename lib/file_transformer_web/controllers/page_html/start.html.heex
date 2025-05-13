@@ -1,0 +1,37 @@
+<%
+  source_file = "source.xlsx"
+%>
+
+<%= if @upload_success do %>
+  <div class="flex items-center gap-2 text-green-600 font-semibold">
+    ✅ File uploaded successfully!
+  </div>
+<% end %>
+
+
+<form
+  action="/xlsx/upload"
+  method="post"
+  enctype="multipart/form-data"
+  class="border-2 border-dashed border-gray-300 rounded p-6 bg-white shadow-sm w-full max-w-md mx-auto mt-6"
+
+>
+  <label
+    for="file"
+    class="block text-sm font-medium text-gray-700 mb-2">
+    Upload Spreadsheet (.xlsx)
+  </label>
+
+  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+  <input type="file" name="file" accept=".xlsx"
+    class="block w-full text-sm text-gray-600
+           file:mr-4 file:py-2 file:px-4
+           file:rounded file:border-0
+           file:text-sm file:font-semibold
+           file:bg-blue-50 file:text-blue-700
+           hover:file:bg-blue-100"
+  />
+  <button type="submit"
+    class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
+  >Upload</button>
+</form>
