@@ -7,7 +7,11 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Ready to run in production?
+
+* To run on [fly.io](https://fly.io), copy `fly.toml.sample` to `fly.toml`, or run `fly launch` which will generate a fly.toml file for you.
+
+Also, please [check Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more
 
